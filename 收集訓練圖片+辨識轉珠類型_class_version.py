@@ -183,7 +183,7 @@ class towers_of_saviors(object):
             for jj in range(0 , grid_w):   
                 cv2.putText(self.img_transform_2 , str(arr_test[ii][jj] + 1) ,
                             ( int((jj + 0.5) * self.grid_pixel) , int((ii + 0.5) * self.grid_pixel) ) ,
-                            cv2.FONT_HERSHEY_COMPLEX , 1 , (50 , 50 , 100) , 2 , cv2.LINE_AA)
+                            cv2.FONT_HERSHEY_COMPLEX , 1 , (50 , 150 , 255) , 2 , cv2.LINE_AA)
         cv2.imshow('Predict Label' , self.img_transform_2)
         cv2.resizeWindow('Predict Label' ,  500 , 400)
 
@@ -191,12 +191,12 @@ class towers_of_saviors(object):
         fig , ax = plt.subplots(1 , 2 , figsize = (20 , 10))
 
         ax[0].imshow(self.img_transform_1)
-        ax[0].set_title('Correct Label' , size = 20)
+        ax[0].set_title('Correct Label' , size = 50)
         ax[0].set_xticks([])
         ax[0].set_yticks([])
 
         ax[1].imshow(self.img_transform_2)
-        ax[1].set_title('Predict label' , size = 20)
+        ax[1].set_title('Predict label' , size = 50)
         ax[1].set_xticks([])
         ax[1].set_yticks([])
 
