@@ -206,6 +206,9 @@ count , x0 , x1 , x2 , x3 , y0 , y1 , y2 , y3 = 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 
 grid_h , grid_w , grid_pixel , offset = 5 , 6 , 50 , 10
 TOS = towers_of_saviors(grid_h , grid_w , grid_pixel , offset)
 
+# 若update = 1，則分別對圖片取四個角落取邊界點，並將四個邊界點的座標存成txt檔，並利用這四個邊界點的座標進行透視轉換
+# 若update = 0 且 mode = 'Image Collecting'，則讀取已存檔的txt檔，並將txt檔中的四個邊界點的座標進行透視轉換，最後收集神魔之塔轉珠的image與對應的正確label
+# 若update = 0 且 mode = 'Image Identifying'，則讀取已存檔的txt檔，並將txt檔中的四個邊界點的座標進行透視轉換，最後用訓練完成的model辨識神魔之塔轉珠的image
 update = 0
 mode = 'Image Identifying'
 if update == 1:
